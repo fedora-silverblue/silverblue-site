@@ -110,10 +110,13 @@ app/org.gnome.Builder/x86_64/master                     gnome-apps-nightly b14e6
   <h3>Get onto a new OS release? Do I have to reinstall?</h3>
 
   <p>No, you don't have to reinstall. You can run: <em>rpm-ostree rebase</em>,
-  and give it the name of the new OS (fixme: how to find that name).
+  and give it the name of the new OS.
   The process is very similar to a system update: the new OS is
   downloaded and installed in the background, and you just boot into
   it when it is ready.</p>
+  <p>Just like system updates, rebases can be reversed: the previous
+  deployment is still available, and you can boot back into it if there
+  are any problems with the new OS.</p>
 
   <p>We plan to have gnome-software offer the same functionality in
   Fedora 28 as well.</p>
