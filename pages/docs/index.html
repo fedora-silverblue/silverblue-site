@@ -5,9 +5,10 @@
 <article>
   <h1>What is Silverblue ?</h1>
 
-  <p><em>Fedora Silverblue</em> is the desktop version of Fedora Atomic Host. It is still heavily
-  in development with only few external users. This project is actively maintained and is
-  ready for use by sophisticated and interested users, but not ready for widespread promotion.</p>
+  <p><em>Silverblue</em> is the new face of Atomic Workstation from Project Atomic.
+  With good support for container-focused workflows, this variant of Fedora Workstation
+  targets developer communities. Its image-based nature provides easy rollbacks and
+  workflows that are familiar from OSTree-based servers.</p>
 
   <h1>Anatomy of the System</h1>
 
@@ -135,10 +136,13 @@ app/org.gnome.Builder/x86_64/master                     gnome-apps-nightly b14e6
 
   <h3>Get my browser to play youtube videos?</h3>
 
-  <p>firefox is included in the Atomic Workstation image. Getting it to
+  <p>firefox is included in the OS image for now. Until that changes, getting it to
   play videos works the same way as it does for the regular Workstation:
   find a package with the needed codecs, and install it. The one difference
   is that you'll use rpm-ostree install instead of dnf install.</p>
+
+  <p>An alternative solution is to install the nightly firefox, which is available
+  as a Flatpak <a href="https://firefox-flatpak.mojefedora.cz/org.mozilla.FirefoxNightly.flatpakref">here</a>.</p>
 
   <h3>Install gcc or gdb?</h3>
 
