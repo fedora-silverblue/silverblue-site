@@ -1,6 +1,7 @@
 header {width: 15%; min-width: 220px; margin: 0%; padding: 2%; position: fixed; margin: 0% 0% 0% 5%;}
 header nav {margin: 5% 0% 0% 5%;}
-header nav a {display: block; padding: 1% 0% 1% 10%; white-space: nowrap;}
+header nav a {display: block; padding: 0; white-space: nowrap;}
+header nav a.logo img {width: 200px; height: 200px;}
 
 article {margin: 0% 25%; width: 60%; padding: 2%;}
 
@@ -16,14 +17,14 @@ footer nav a {width: 20%; padding: 1% 1% 2% 1%;}
 @media all and (min-width: 1025px) {
   header {margin: 0;}
   article {margin: 0% 0% 0% 250px; width: 60%; padding: 2%;}
+  header nav a.logo img {padding-bottom: 20px;}
 }
 
 @media all and (max-width: 1024px) {
   header {clear: both; width: 100%; margin: 0%; padding: 0%; position: relative;}
   header nav {margin: 0%;}
-  header nav a {display: inline; padding: 1% 0% 1% 1%; }
+  header nav a {display: inline; padding: 0;}
   header nav hr {display: none;}
-  header img {display: block; margin: auto;}
   article {clear: both; width: 96%; margin: 5% 0% 2% 0%; padding: 2%;}
 }
 
