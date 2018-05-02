@@ -3,151 +3,31 @@
 
 {{define "body"}}
 <article>
-  <h1>What is Silverblue ?</h1>
+  <h1>Documentation</h1>
+
+  <h2>What is Silverblue?</h2>
 
   <p><em>Silverblue</em> is the new face of Atomic Workstation from Project Atomic.
   With good support for container-focused workflows, this variant of Fedora Workstation
-  targets developer communities. Its image-based nature provides easy rollbacks and
-  workflows that are familiar from OSTree-based servers.</p>
+  targets developer communities.</p>
 
-  <h1>Anatomy of the System</h1>
+  <p>The use of rpm-ostree for the core OS brings fully atomic upgrades, easy rollbacks and
+  workflows that are familiar from OSTree-based servers. Because rpm-ostree is a hybrid
+  image/package system, it is also possible to layer RPMs for desktop applications
+  which aren't yet Flatpaks, and for "OS extensions" such as powerline and ykclient.</p>
 
-  <h2>The filesystem: what is read-only and what isn't</h2>
+  <p>Moving desktop applications into Flatpak brings stronger isolation, and solves
+  longstanding issues with using yum/dnf for desktop applications, such as the fact that
+  upgrading deletes the files underneath the running application and often breaks it. (And
+  we don't want most desktop applications in the base OSTree stream, since it is meant for
+  the "base OS" which goes along with a kernel which requires a reboot).</p>
 
-  <p>The root filesystem has the immutable attribute set on OSTree installations,
-  so /, /usr and everything below it is readonly. /var is where all the runtime
-  state is kept. There are some symlinks that put the state-carrying directories
-  in their traditional, expected place:
-  <ul>
-    <li>/home → /var/home</li>
-    <li>/etc → /var/etc</li>
-    <li>/mnt → /var/mnt</li>
-    <li>/opt → /var/opt</li>
-  </ul>
-  and so on. If you have a separate home partition on your system, it should be
-  mounted on /var/home.</p>
+  <h2>Learning More</h1>
 
-  <h2>Packaging: ostree, rpms, flatpaks and containers</h2>
+  <p>The <a href="/docs/gettingstarted">Getting Started</a> guide will help you take
+  the first steps with Team Silverblue. You can learn more about the
+  <a href="/docs/anatomy">anatomy of the system</a> and the available
+  <a href="/docs/tools">tools</a>.</p>
 
-  <p><em>ostree</em> (and its sibling, rpm-ostree) are responsible for deploying and updating
-  the OS image (ie everything below / that is not symlinked into /var). ostree also
-  contains the necessary logic to update grub.cfg entries to point to the current
-  image.</p>
-
-  <p><em>rpm-ostree</em> builds on top of ostree, and makes it possible to install rpms as a
-  'layer' on top of an ostree image. In practice, that means you can install rpms
-  as usual, just use rpm-ostree install instead of dnf install. What happens under
-  the covers is that rpm-ostree will compose a new OS image by adding the rpm payload
-  to the existing OS image, and creating a new, combined image. To see the newly
-  installed rpms, you have to reboot into the new image. rpm-ostree also takes care
-  of recreating the layered image whenever you update the base OS image.</p>
-
-  <p><em>flatpak</em> uses container technologies to deploy and run desktop applications isolated
-  from the underlying OS.</p>
-
-  <p><em>buildah</em> and <em>podman</em> are convenient commandline tools for creating and running
-  general containers.</p>
-
-
-  <h2>First Steps: How do I…</h2>
-
-  <h3>Identify the right OS to boot in the bootloader?</h3>
-
-  <p>ostree adds a grub menu item for every commit, this includes updates installed
-  with <em>rpm-ostree upgrade</em> and package layering with <em>rpm-ostree install</em>.
-  Updated OS images generally get an incremented version number, like:
-
-<pre>
-  Fedora 27 (Workstation Edition) 27.72 (ostree)
-</pre>
-
-  Currently, layered packages are not easily identified in the grub
-  menu. A fix for this is being <a href="https://github.com/projectatomic/rpm-ostree/issues/1239">discussed</a>.</p>
-
-  <h3>Update my system?</h3>
-
-  <p>To get updates for the OS, you can run: <em>rpm-ostree upgrade</em>.
-  Starting with Fedora 28, gnome-software will also offer OS
-  updates on Atomic systems. Note that due to the atomic nature
-  of the OS, you will have to reboot into the new image to
-  have the updates take effect.</p>
-
-  <h3>Check for system updates?</h3>
-
-  <p>This command will let you check if updates are available: <em>rpm-ostree upgrade --check</em>.
-  Starting with Fedora 28, gnome-software will also notify you about OS updates, just
-  like it does on the normal workstation.</p>
-
-  <h3>Update my applications?</h3>
-
-  <p>To update your flatpak applications, you can run: <em>flatpak update</em>.
-  gnome-software will also offer flatpak application updates.
-  Note that flatpaks are independent of the base system, so you
-  can install updates without a reboot, and just restart affected
-  applications afterwards to get the new version.</p>
-
-  <h3>Check for application updates?</h3>
-
-  <p>This command will let you check if updates are available: <em>flatpak remote-ls --updates</em>.
-  if you add the -d option, it will generate detailed information about the available
-  updates:
-
-<pre>
-$ flatpak remote-ls --updates -d
-Ref                                                     Origin             Commit       Installed size Download size
-app/com.valvesoftware.Steam/x86_64/stable               flathub            effe21b05e42   6.3 MB         4.1 MB
-app/org.blender.Blender/x86_64/stable                   flathub            ac90294a1cc3 225.4 MB        79.6 MB
-runtime/org.freedesktop.Platform.VAAPI.Intel/x86_64/1.6 flathub            818a1504fad1   8.7 MB         2.7 MB
-runtime/org.gnome.Platform/x86_64/3.24                  flathub            6132154b089b 739.5 MB       281.4 MB
-runtime/org.gnome.Platform/x86_64/3.26                  flathub            be9fe7b43711 782.5 MB       296.8 MB
-runtime/org.gnome.Sdk/x86_64/3.26                       flathub            c62d5ddf669a   1.6 GB       582.9 MB
-runtime/org.kde.Platform/x86_64/5.9                     flathub            ea891f4a918f   1.1 GB       391.0 MB
-app/org.gnome.Builder/x86_64/master                     gnome-apps-nightly b14e6c0fc6c3 105.0 MB        35.4 MB
-</pre>
-
-  gnome-software will also notify you about application updates, just like it does
-  on the normal workstation.</p>
-
-  <h3>Get onto a new OS release? Do I have to reinstall?</h3>
-
-  <p>No, you don't have to reinstall. You can run: <em>rpm-ostree rebase</em>,
-  and give it the name of the new OS.
-  The process is very similar to a system update: the new OS is
-  downloaded and installed in the background, and you just boot into
-  it when it is ready.</p>
-  <p>Just like system updates, rebases can be reversed: the previous
-  deployment is still available, and you can boot back into it if there
-  are any problems with the new OS.</p>
-
-  <p>We plan to have gnome-software offer the same functionality in
-  Fedora 28 as well.</p>
-
-  <h3>Get my vpn connections back?</h3>
-
-  <p>/etc is not part of the immutable OS image, so you can just copy
-  files into /etc/NetworkManager/system-connections (or let NetworkManager
-  store them there when you recreate your connections). Certificates
-  in /etc/pki need to be handled similarly.</p>
-
-  <h3>Install app xyz?</h3>
-
-  <p>gnome-software has excellent support for installing flatpaks. A convenient
-  place to find many popular desktop apps as flatpaks is <a href="flathub.org">flathub.org</a>.</p>
-
-  <h3>Get my browser to play youtube videos?</h3>
-
-  <p>firefox is included in the OS image for now. Until that changes, getting it to
-  play videos works the same way as it does for the regular Workstation:
-  find a package with the needed codecs, and install it. The one difference
-  is that you'll use rpm-ostree install instead of dnf install.</p>
-
-  <p>An alternative solution is to install the nightly firefox, which is available
-  as a Flatpak <a href="https://firefox-flatpak.mojefedora.cz/org.mozilla.FirefoxNightly.flatpakref">here</a>.</p>
-
-  <h3>Install gcc or gdb?</h3>
-
-  <p>This is best done by using a so-called 'pet container' where you can
-  install the tools you need. buildah or podman are good tools to set up
-  such containers.</p>
 </article>
 {{end}}
