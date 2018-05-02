@@ -1,0 +1,44 @@
+<!-- See structure.html for the template names used here and their position in the layout. -->
+{{define "title"}}Team Silverblue &mdash; Anatomy of the System{{end}}
+
+{{define "body"}}
+<article>
+  <h1>Anatomy of the System</h1>
+
+  <h2>The filesystem: what is read-only and what isn't</h2>
+
+  <p>The root filesystem has the immutable attribute set on OSTree installations,
+  so /, /usr and everything below it is readonly. /var is where all the runtime
+  state is kept. There are some symlinks that put the state-carrying directories
+  in their traditional, expected place:
+  <ul>
+    <li>/home → /var/home</li>
+    <li>/etc → /var/etc</li>
+    <li>/mnt → /var/mnt</li>
+    <li>/opt → /var/opt</li>
+  </ul>
+  and so on. If you have a separate home partition on your system, it should be
+  mounted on /var/home.</p>
+
+  <h2>Packaging: ostree, rpms, flatpaks and containers</h2>
+
+  <p><em>ostree</em> (and its sibling, rpm-ostree) are responsible for deploying and updating
+  the OS image (ie everything below / that is not symlinked into /var). ostree also
+  contains the necessary logic to update grub.cfg entries to point to the current
+  image.</p>
+
+  <p><em>rpm-ostree</em> builds on top of ostree, and makes it possible to install rpms as a
+  'layer' on top of an ostree image. In practice, that means you can install rpms
+  as usual, just use rpm-ostree install instead of dnf install. What happens under
+  the covers is that rpm-ostree will compose a new OS image by adding the rpm payload
+  to the existing OS image, and creating a new, combined image. To see the newly
+  installed rpms, you have to reboot into the new image. rpm-ostree also takes care
+  of recreating the layered image whenever you update the base OS image.</p>
+
+  <p><em>flatpak</em> uses container technologies to deploy and run desktop applications isolated
+  from the underlying OS.</p>
+
+  <p><em>buildah</em> and <em>podman</em> are convenient commandline tools for creating and running
+  general containers.</p>
+</article>
+{{end}}

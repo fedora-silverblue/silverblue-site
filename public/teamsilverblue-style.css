@@ -12,7 +12,7 @@ footer {clear: both; text-align: center; padding: 1%;}
 footer p {padding: 2% 0% 0% 0%}
 footer nav a {width: 20%; padding: 1% 1% 2% 1%;}
 
-.icon {width:24px; height: 24px; vertical-align: middle; margin: 0 10px 0 0;}
+.icon {width: 20px; height: 20px; vertical-align: middle; margin: 0 10px 0 0;}
 
 @media all and (min-width: 1025px) {
   header {margin: 0;}
