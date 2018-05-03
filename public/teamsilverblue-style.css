@@ -112,6 +112,11 @@ article {
   letter-spacing: 0.2em;
   color: rgba(0, 0, 0, 0.3); }
 
+img.blog-image {
+  display: block;
+  margin: auto;
+  padding: 10px; }
+
 ul li {
   list-style-type: none;
   padding: 0 0 0 20px;
