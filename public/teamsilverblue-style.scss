@@ -5,7 +5,11 @@ body {
   font-size: 12pt;
   line-height: 1.5em;
   max-width: 62em;
-  margin: 2em auto;
+  margin: auto;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;  
 }
 
 h1,h2,h3,h4,h5 {
@@ -39,6 +43,7 @@ a {
 
 .wrapper {
   display: flex;
+  flex: 1;
 }
 
 header {
@@ -120,10 +125,9 @@ article {
 
 
 footer {
-  clear: both; 
   text-align: center; 
-  padding: 1%;
-
+  padding: 2em;
+  margin: 0;
   p {
     padding: 2% 0% 0% 0%;
   }
