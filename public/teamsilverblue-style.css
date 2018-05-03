@@ -30,12 +30,16 @@ a {
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px; }
-    a.button:hover {
+    a.button:hover, a.button:focus {
       background-color: #5780b4; }
-      a.button:hover svg {
+      a.button:hover svg, a.button:focus svg {
         fill: #fff; }
     a.button svg {
       fill: #fff; }
+    a.button:active {
+      background-color: #334f72; }
+      a.button:active svg {
+        fill: #fff; }
 
 .wrapper {
   display: flex;
