@@ -1,17 +1,19 @@
 body {
   font-family: "Source Sans Pro", Sans-Serif;
   font-size: 12pt;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  max-width: 62em;
+  margin: auto; }
 
 h1, h2, h3, h4, h5 {
   font-family: Overpass, Interstate, Sans-Serif;
   font-weight: 200; }
 
 a {
-  color: #729fcf;
+  color: #436795;
   transition: all 400ms ease-in-out; }
   a:visited {
-    color: #729fcf; }
+    color: #436795; }
   a:hover, a:focus {
     color: #000; }
   a.button {
@@ -19,13 +21,13 @@ a {
     margin: 6px;
     padding: 1em;
     text-align: center;
-    background-color: #729fcf;
+    background-color: #436795;
     color: #fff;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px; }
     a.button:hover {
-      background-color: #98b9dc; }
+      background-color: #5780b4; }
       a.button:hover svg {
         fill: #fff; }
     a.button svg {
@@ -67,6 +69,15 @@ article {
     article section.boxes section {
       padding: 1em; }
 
+.conditions {
+  cursor: pointer;
+  margin: 1em; }
+  .conditions p {
+    box-sizing: border-box;
+    line-spacing: 3em;
+    font-size: 90%;
+    margin: 2em; }
+
 #copyright {
   margin: 3em 0 0 0;
   font-size: 80%;
@@ -100,7 +111,7 @@ footer {
     margin: 0; }
 
   article {
-    margin: 0% 0% 0% 250px;
+    margin: 0% 0% 0% 290px;
     width: 60%;
     padding: 2%; }
 
