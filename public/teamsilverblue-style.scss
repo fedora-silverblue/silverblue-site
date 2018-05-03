@@ -1,5 +1,7 @@
 body {
-  font-family: "Source Sans", Sans-Serif;
+  font-family: "Source Sans Pro", Sans-Serif;
+  font-size: 12pt;
+  line-height: 1.5em;
 }
 
 h1,h2,h3,h4,h5 {
@@ -10,6 +12,8 @@ h1,h2,h3,h4,h5 {
 a {
   color: #729fcf;
   &:visited { color: #729fcf; }
+  &:hover, &:focus { color: #000; }
+  transition: all 400ms ease-in-out;
 }
 
 header {
@@ -88,6 +92,7 @@ footer {
   vertical-align: middle; 
   margin: 0 10px 0 0;
   fill: #729fcf;
+  transition: all 400ms ease-in-out;
   a:hover & {
     fill: black;
   }

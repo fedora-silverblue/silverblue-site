@@ -1,14 +1,19 @@
 body {
-  font-family: "Source Sans", Sans-Serif; }
+  font-family: "Source Sans Pro", Sans-Serif;
+  font-size: 12pt;
+  line-height: 1.5em; }
 
 h1, h2, h3, h4, h5 {
   font-family: Overpass, Interstate, Sans-Serif;
   font-weight: 200; }
 
 a {
-  color: #729fcf; }
+  color: #729fcf;
+  transition: all 400ms ease-in-out; }
   a:visited {
     color: #729fcf; }
+  a:hover, a:focus {
+    color: #000; }
 
 header {
   width: 15%;
@@ -66,7 +71,8 @@ footer {
   height: 16px;
   vertical-align: middle;
   margin: 0 10px 0 0;
-  fill: #729fcf; }
+  fill: #729fcf;
+  transition: all 400ms ease-in-out; }
   a:hover .icon {
     fill: black; }
 
