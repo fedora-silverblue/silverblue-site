@@ -71,15 +71,17 @@ header {
 
 main {
   flex: 4;
-  margin: 1em; }
+  padding: 1em; }
 
-article section.boxes {
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2.5em;
-  padding: 0.5em; }
-  article section.boxes section {
-    padding: 1em; }
+article {
+  box-sizing: border-box; }
+  article section.boxes {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2.5em;
+    padding: 0.5em; }
+    article section.boxes section {
+      padding: 1em; }
 
 .conditions {
   cursor: pointer;
@@ -117,6 +119,16 @@ footer {
   a:hover .icon {
     fill: black; }
 
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: 70%;
+  background-color: #eee;
+  padding: 2em;
+  overflow-x: auto;
+  max-width: 60em;
+  margin: 3em auto;
+  border-radius: 6px; }
+
 /* Mobile Layout */
 @media all and (max-width: 1024px) {
   .wrapper {
@@ -133,7 +145,8 @@ footer {
     margin: 6px 6px 6px 140px; }
 
   header nav a {
-    padding: .5em 1em; }
+    padding: .5em 1em;
+    text-align: center; }
 
   header nav hr {
     display: none; }

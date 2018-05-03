@@ -87,11 +87,11 @@ header {
 
 main {
   flex: 4;
-  margin: 1em;
+  padding: 1em;
 }
 
 article {
-  
+  box-sizing: border-box;
   section.boxes {
     display: inline-grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
@@ -150,6 +150,17 @@ footer {
   }
 }
 
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: 70%;
+  background-color: #eee;
+  padding: 2em;
+  overflow-x: auto;
+  max-width: 60em;
+  margin: 3em auto;
+  border-radius: 6px;
+}
+
 /* Mobile Layout */
 
 @media all and (max-width: 1024px) {
@@ -169,6 +180,7 @@ footer {
   }
   header nav a {
     padding: .5em 1em;
+    text-align: center;
   }
   header nav hr {display: none;}
   header a.logo img { 
