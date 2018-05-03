@@ -63,6 +63,14 @@ header {
       padding: 0;
       white-space: nowrap;
       margin: .5em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 80%;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      &:hover, &:active, &:focus {
+        border-bottom: 2px solid $key_color;
+      }
     }      
 
     hr {
@@ -73,7 +81,7 @@ header {
 }
 
 main {
-  flex: 6;
+  flex: 4;
   margin: 1em;
 }
 
@@ -121,8 +129,8 @@ footer {
   }
   
   nav a {
-    width: 20%; /* OUCH */
-    padding: 1% 1% 2% 1%;
+    text-alias: center;
+    padding: 1em;
   }
 }
 
@@ -138,6 +146,7 @@ footer {
   }
 }
 
+/* Mobile Layout */
 
 @media all and (max-width: 1024px) {
   .wrapper {

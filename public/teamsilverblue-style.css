@@ -53,13 +53,20 @@ header {
       display: block;
       padding: 0;
       white-space: nowrap;
-      margin: .5em 0; }
+      margin: .5em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 80%;
+      text-decoration: none;
+      border-bottom: 2px solid transparent; }
+      header nav a:hover, header nav a:active, header nav a:focus {
+        border-bottom: 2px solid #436795; }
     header nav hr {
       border-width: 0;
       margin: 1em; }
 
 main {
-  flex: 6;
+  flex: 4;
   margin: 1em; }
 
 article section.boxes {
@@ -92,9 +99,8 @@ footer {
   footer p {
     padding: 2% 0% 0% 0%; }
   footer nav a {
-    width: 20%;
-    /* OUCH */
-    padding: 1% 1% 2% 1%; }
+    text-alias: center;
+    padding: 1em; }
 
 .icon {
   /* Really dislike these */
@@ -107,6 +113,7 @@ footer {
   a:hover .icon {
     fill: black; }
 
+/* Mobile Layout */
 @media all and (max-width: 1024px) {
   .wrapper {
     flex-direction: column; }
