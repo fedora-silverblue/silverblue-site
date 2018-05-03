@@ -40,13 +40,16 @@ header {
   min-width: 220px; 
   margin: 0%; 
   padding: 2%; 
-  position: fixed; 
+  position: fixed;
   margin: 0% 0% 0% 5%;
   
   nav {
     margin: 5% 0% 0% 5%;
+    display: flex;
+    flex-direction: column;
     
     a {
+      flex: 1;
       display: block; 
       padding: 0;
       white-space: nowrap;
@@ -120,14 +123,30 @@ footer {
 @media all and (min-width: 1025px) {
   header {margin: 0;}
   article {margin: 0% 0% 0% 250px; width: 60%; padding: 2%;}
-  header nav a.logo img {padding-bottom: 20px;}
+  header a.logo img {padding-bottom: 20px;}
 }
 
 @media all and (max-width: 1024px) {
   header {clear: both; width: 100%; margin: 0%; padding: 0%; position: relative;}
-  header nav {margin: 0%;}
-  header nav a {display: inline; padding: 0;}
+  header nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 6px 6px 6px 140px;
+    
+  }
+  header nav a {
+    padding: .5em 1em;
+  }
   header nav hr {display: none;}
+  header a.logo img { 
+    position: absolute;
+    top: 0; left: 0;
+    order: 6;
+    width: 96px; height: auto;
+    margin: 16px;
+  }
   article {clear: both; width: 96%; margin: 5% 0% 2% 0%; padding: 2%;}
 }
 
