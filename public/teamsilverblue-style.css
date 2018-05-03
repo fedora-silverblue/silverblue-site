@@ -106,6 +106,13 @@ article {
   letter-spacing: 0.2em;
   color: rgba(0, 0, 0, 0.3); }
 
+ul li {
+  list-style-type: none;
+  padding: 0 0 0 20px;
+  vertical-align: middle;
+  margin: .5em 0;
+  background: url(/public/bullet.svg) no-repeat left 4px; }
+
 footer {
   text-align: center;
   padding: 2em;
