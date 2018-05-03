@@ -13,6 +13,12 @@ h1, h2, h3, h4, h5 {
   font-family: Overpass, Interstate, Sans-Serif;
   font-weight: 200; }
 
+h1 {
+  font-size: 160%; }
+
+h2 {
+  font-size: 120%; }
+
 a {
   color: #436795;
   transition: all 400ms ease-in-out; }
