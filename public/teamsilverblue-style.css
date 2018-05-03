@@ -1,30 +1,156 @@
-header {width: 15%; min-width: 220px; margin: 0%; padding: 2%; position: fixed; margin: 0% 0% 0% 5%;}
-header nav {margin: 5% 0% 0% 5%;}
-header nav a {display: block; padding: 0; white-space: nowrap;}
-header nav a.logo img {width: 200px; height: 200px;}
+body {
+  font-family: "Source Sans Pro", Sans-Serif;
+  font-size: 12pt;
+  line-height: 1.5em;
+  max-width: 62em;
+  margin: auto; }
 
-article {margin: 0% 25%; width: 60%; padding: 2%;}
+h1, h2, h3, h4, h5 {
+  font-family: Overpass, Interstate, Sans-Serif;
+  font-weight: 200; }
 
-article section.boxes {display: inline-grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); grid-gap: 2.5em; padding: 0.5em;}
-article section.boxes section {padding: 1em;}
+a {
+  color: #436795;
+  transition: all 400ms ease-in-out; }
+  a:visited {
+    color: #436795; }
+  a:hover, a:focus {
+    color: #000; }
+  a.button {
+    display: inline-block;
+    margin: 6px;
+    padding: 1em;
+    text-align: center;
+    background-color: #436795;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    a.button:hover {
+      background-color: #5780b4; }
+      a.button:hover svg {
+        fill: #fff; }
+    a.button svg {
+      fill: #fff; }
 
-footer {clear: both; text-align: center; padding: 1%;}
-footer p {padding: 2% 0% 0% 0%}
-footer nav a {width: 20%; padding: 1% 1% 2% 1%;}
+header {
+  width: 15%;
+  min-width: 220px;
+  margin: 0%;
+  padding: 2%;
+  position: fixed;
+  margin: 0% 0% 0% 5%; }
+  header nav {
+    margin: 5% 0% 0% 5%;
+    display: flex;
+    flex-direction: column; }
+    header nav a {
+      flex: 1;
+      display: block;
+      padding: 0;
+      white-space: nowrap;
+      margin: .5em 0; }
+      header nav a.logo img {
+        width: 200px;
+        height: 200px; }
+    header nav hr {
+      border-width: 0;
+      margin: 1em; }
 
-.icon {width: 20px; height: 20px; vertical-align: middle; margin: 0 10px 0 0;}
+article {
+  margin: 0% 25%;
+  width: 60%;
+  padding: 2%; }
+  article section.boxes {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2.5em;
+    padding: 0.5em; }
+    article section.boxes section {
+      padding: 1em; }
+
+.conditions {
+  cursor: pointer;
+  margin: 1em; }
+  .conditions p {
+    box-sizing: border-box;
+    line-spacing: 3em;
+    font-size: 90%;
+    margin: 2em; }
+
+#copyright {
+  margin: 3em 0 0 0;
+  font-size: 80%;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.3); }
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 1%; }
+  footer p {
+    padding: 2% 0% 0% 0%; }
+  footer nav a {
+    width: 20%;
+    /* OUCH */
+    padding: 1% 1% 2% 1%; }
+
+.icon {
+  /* Really dislike these */
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  fill: #729fcf;
+  transition: all 400ms ease-in-out; }
+  a:hover .icon {
+    fill: black; }
 
 @media all and (min-width: 1025px) {
-  header {margin: 0;}
-  article {margin: 0% 0% 0% 250px; width: 60%; padding: 2%;}
-  header nav a.logo img {padding-bottom: 20px;}
-}
+  header {
+    margin: 0; }
 
+  article {
+    margin: 0% 0% 0% 290px;
+    width: 60%;
+    padding: 2%; }
+
+  header a.logo img {
+    padding-bottom: 20px; } }
 @media all and (max-width: 1024px) {
-  header {clear: both; width: 100%; margin: 0%; padding: 0%; position: relative;}
-  header nav {margin: 0%;}
-  header nav a {display: inline; padding: 0;}
-  header nav hr {display: none;}
-  article {clear: both; width: 96%; margin: 5% 0% 2% 0%; padding: 2%;}
-}
+  header {
+    clear: both;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    position: relative; }
 
+  header nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 6px 6px 6px 140px; }
+
+  header nav a {
+    padding: .5em 1em; }
+
+  header nav hr {
+    display: none; }
+
+  header a.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    order: 6;
+    width: 96px;
+    height: auto;
+    margin: 16px; }
+
+  article {
+    clear: both;
+    width: 96%;
+    margin: 5% 0% 2% 0%;
+    padding: 2%; } }
+
+/*# sourceMappingURL=teamsilverblue-style.css.map */

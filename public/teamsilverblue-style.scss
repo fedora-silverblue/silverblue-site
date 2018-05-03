@@ -1,0 +1,166 @@
+$key_color: #436795;
+
+body {
+  font-family: "Source Sans Pro", Sans-Serif;
+  font-size: 12pt;
+  line-height: 1.5em;
+  max-width: 62em;
+  margin: auto;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Overpass, Interstate, Sans-Serif;
+  font-weight: 200;
+}
+
+a {
+  color: $key_color;
+  &:visited { color: $key_color; }
+  &:hover, &:focus { color: #000; }
+  transition: all 400ms ease-in-out;
+  
+  &.button {
+    display: inline-block;
+    margin: 6px;
+    padding: 1em;
+    text-align: center;
+    background-color: $key_color;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    &:hover {
+      background-color: lighten($key_color, 10%);
+      & svg { fill: #fff; }
+    }
+    & svg { fill: #fff; }
+  }
+}
+
+header {
+  width: 15%; 
+  min-width: 220px; 
+  margin: 0%; 
+  padding: 2%; 
+  position: fixed;
+  margin: 0% 0% 0% 5%;
+  
+  nav {
+    margin: 5% 0% 0% 5%;
+    display: flex;
+    flex-direction: column;
+    
+    a {
+      flex: 1;
+      display: block; 
+      padding: 0;
+      white-space: nowrap;
+      margin: .5em 0;
+      
+      &.logo img {
+       width: 200px;
+       height: 200px;
+      }
+    }
+    
+    hr {
+      border-width: 0;
+      margin: 1em;
+    }
+  }
+}
+
+article {
+  margin: 0% 25%; 
+  width: 60%; 
+  padding: 2%;
+  
+  section.boxes {
+    display: inline-grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
+    grid-gap: 2.5em; 
+    padding: 0.5em;
+    
+    section {
+      padding: 1em;
+    }
+  }
+}
+
+.conditions {
+  cursor: pointer;
+  margin: 1em;
+  
+  p {
+    box-sizing: border-box;
+    line-spacing: 3em;
+    font-size: 90%;
+    margin: 2em;
+  }
+}
+
+#copyright {
+  margin: 3em 0 0 0;
+  font-size: 80%;
+  letter-spacing: 0.2em;
+  color: rgba(0,0,0,0.3);
+}
+
+
+footer {
+  clear: both; 
+  text-align: center; 
+  padding: 1%;
+
+  p {
+    padding: 2% 0% 0% 0%;
+  }
+  
+  nav a {
+    width: 20%; /* OUCH */
+    padding: 1% 1% 2% 1%;
+  }
+}
+
+.icon { /* Really dislike these */
+  width: 16px; 
+  height: 16px; 
+  vertical-align: middle; 
+  margin: 0 10px 0 0;
+  fill: #729fcf;
+  transition: all 400ms ease-in-out;
+  a:hover & {
+    fill: black;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  header {margin: 0;}
+  article {margin: 0% 0% 0% 290px; width: 60%; padding: 2%;}
+  header a.logo img {padding-bottom: 20px;}
+}
+
+@media all and (max-width: 1024px) {
+  header {clear: both; width: 100%; margin: 0%; padding: 0%; position: relative;}
+  header nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 6px 6px 6px 140px;
+    
+  }
+  header nav a {
+    padding: .5em 1em;
+  }
+  header nav hr {display: none;}
+  header a.logo img { 
+    position: absolute;
+    top: 0; left: 0;
+    order: 6;
+    width: 96px; height: auto;
+    margin: 16px;
+  }
+  article {clear: both; width: 96%; margin: 5% 0% 2% 0%; padding: 2%;}
+}
+
