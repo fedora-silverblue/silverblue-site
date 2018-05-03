@@ -3,7 +3,7 @@ body {
   font-size: 12pt;
   line-height: 1.5em;
   max-width: 62em;
-  margin: auto; }
+  margin: 2em auto; }
 
 h1, h2, h3, h4, h5 {
   font-family: Overpass, Interstate, Sans-Serif;
@@ -33,13 +33,17 @@ a {
     a.button svg {
       fill: #fff; }
 
+.wrapper {
+  display: flex; }
+
 header {
-  width: 15%;
-  min-width: 220px;
+  flex: 1;
   margin: 0%;
   padding: 2%;
-  position: fixed;
   margin: 0% 0% 0% 5%; }
+  header .logo img {
+    width: 128px;
+    height: 128px; }
   header nav {
     margin: 5% 0% 0% 5%;
     display: flex;
@@ -50,24 +54,21 @@ header {
       padding: 0;
       white-space: nowrap;
       margin: .5em 0; }
-      header nav a.logo img {
-        width: 200px;
-        height: 200px; }
     header nav hr {
       border-width: 0;
       margin: 1em; }
 
-article {
-  margin: 0% 25%;
-  width: 60%;
-  padding: 2%; }
-  article section.boxes {
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2.5em;
-    padding: 0.5em; }
-    article section.boxes section {
-      padding: 1em; }
+main {
+  flex: 6;
+  margin: 1em; }
+
+article section.boxes {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2.5em;
+  padding: 0.5em; }
+  article section.boxes section {
+    padding: 1em; }
 
 .conditions {
   cursor: pointer;
@@ -106,18 +107,10 @@ footer {
   a:hover .icon {
     fill: black; }
 
-@media all and (min-width: 1025px) {
-  header {
-    margin: 0; }
-
-  article {
-    margin: 0% 0% 0% 290px;
-    width: 60%;
-    padding: 2%; }
-
-  header a.logo img {
-    padding-bottom: 20px; } }
 @media all and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column; }
+
   header {
     clear: both;
     width: 100%;
@@ -145,12 +138,6 @@ footer {
     order: 6;
     width: 96px;
     height: auto;
-    margin: 16px; }
-
-  article {
-    clear: both;
-    width: 96%;
-    margin: 5% 0% 2% 0%;
-    padding: 2%; } }
+    margin: 16px; } }
 
 /*# sourceMappingURL=teamsilverblue-style.css.map */

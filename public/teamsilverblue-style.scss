@@ -5,7 +5,7 @@ body {
   font-size: 12pt;
   line-height: 1.5em;
   max-width: 62em;
-  margin: auto;
+  margin: 2em auto;
 }
 
 h1,h2,h3,h4,h5 {
@@ -37,14 +37,21 @@ a {
   }
 }
 
+.wrapper {
+  display: flex;
+}
+
 header {
-  width: 15%; 
-  min-width: 220px; 
+  flex: 1;
   margin: 0%; 
-  padding: 2%; 
-  position: fixed;
+  padding: 2%;
   margin: 0% 0% 0% 5%;
-  
+
+  .logo img {
+   width: 128px;
+   height: 128px;
+  }
+ 
   nav {
     margin: 5% 0% 0% 5%;
     display: flex;
@@ -56,13 +63,8 @@ header {
       padding: 0;
       white-space: nowrap;
       margin: .5em 0;
-      
-      &.logo img {
-       width: 200px;
-       height: 200px;
-      }
-    }
-    
+    }      
+
     hr {
       border-width: 0;
       margin: 1em;
@@ -70,10 +72,12 @@ header {
   }
 }
 
+main {
+  flex: 6;
+  margin: 1em;
+}
+
 article {
-  margin: 0% 25%; 
-  width: 60%; 
-  padding: 2%;
   
   section.boxes {
     display: inline-grid; 
@@ -134,13 +138,11 @@ footer {
   }
 }
 
-@media all and (min-width: 1025px) {
-  header {margin: 0;}
-  article {margin: 0% 0% 0% 290px; width: 60%; padding: 2%;}
-  header a.logo img {padding-bottom: 20px;}
-}
 
 @media all and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
   header {clear: both; width: 100%; margin: 0%; padding: 0%; position: relative;}
   header nav {
     flex-direction: row;
@@ -161,6 +163,5 @@ footer {
     width: 96px; height: auto;
     margin: 16px;
   }
-  article {clear: both; width: 96%; margin: 5% 0% 2% 0%; padding: 2%;}
 }
 
