@@ -1,3 +1,5 @@
+$key_color: #729fcf;
+
 body {
   font-family: "Source Sans Pro", Sans-Serif;
   font-size: 12pt;
@@ -10,10 +12,27 @@ h1,h2,h3,h4,h5 {
 }
 
 a {
-  color: #729fcf;
-  &:visited { color: #729fcf; }
+  color: $key_color;
+  &:visited { color: $key_color; }
   &:hover, &:focus { color: #000; }
   transition: all 400ms ease-in-out;
+  
+  &.button {
+    display: inline-block;
+    margin: 6px;
+    padding: 1em;
+    text-align: center;
+    background-color: $key_color;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    &:hover {
+      background-color: lighten($key_color, 10%);
+      & svg { fill: #fff; }
+    }
+    & svg { fill: #fff; }
+  }
 }
 
 header {

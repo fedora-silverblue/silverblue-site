@@ -14,6 +14,22 @@ a {
     color: #729fcf; }
   a:hover, a:focus {
     color: #000; }
+  a.button {
+    display: inline-block;
+    margin: 6px;
+    padding: 1em;
+    text-align: center;
+    background-color: #729fcf;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    a.button:hover {
+      background-color: #98b9dc; }
+      a.button:hover svg {
+        fill: #fff; }
+    a.button svg {
+      fill: #fff; }
 
 header {
   width: 15%;
