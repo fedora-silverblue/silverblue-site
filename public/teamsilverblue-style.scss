@@ -1,3 +1,17 @@
+body {
+  font-family: "Source Sans", Sans-Serif;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Overpass, Interstate, Sans-Serif;
+  font-weight: 200;
+}
+
+a {
+  color: #729fcf;
+  &:visited { color: #729fcf; }
+}
+
 header {
   width: 15%; 
   min-width: 220px; 
@@ -13,11 +27,17 @@ header {
       display: block; 
       padding: 0;
       white-space: nowrap;
+      margin: .5em 0;
       
       &.logo img {
        width: 200px;
        height: 200px;
       }
+    }
+    
+    hr {
+      border-width: 0;
+      margin: 1em;
     }
   }
 }
@@ -39,7 +59,12 @@ article {
   }
 }
 
-
+#copyright {
+  margin: 3em 0 0 0;
+  font-size: 80%;
+  letter-spacing: 0.2em;
+  color: rgba(0,0,0,0.3);
+}
 
 
 footer {
@@ -62,6 +87,10 @@ footer {
   height: 16px; 
   vertical-align: middle; 
   margin: 0 10px 0 0;
+  fill: #729fcf;
+  a:hover & {
+    fill: black;
+  }
 }
 
 @media all and (min-width: 1025px) {

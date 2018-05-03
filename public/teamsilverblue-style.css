@@ -1,3 +1,15 @@
+body {
+  font-family: "Source Sans", Sans-Serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: Overpass, Interstate, Sans-Serif;
+  font-weight: 200; }
+
+a {
+  color: #729fcf; }
+  a:visited {
+    color: #729fcf; }
+
 header {
   width: 15%;
   min-width: 220px;
@@ -10,10 +22,14 @@ header {
     header nav a {
       display: block;
       padding: 0;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin: .5em 0; }
       header nav a.logo img {
         width: 200px;
         height: 200px; }
+    header nav hr {
+      border-width: 0;
+      margin: 1em; }
 
 article {
   margin: 0% 25%;
@@ -26,6 +42,12 @@ article {
     padding: 0.5em; }
     article section.boxes section {
       padding: 1em; }
+
+#copyright {
+  margin: 3em 0 0 0;
+  font-size: 80%;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.3); }
 
 footer {
   clear: both;
@@ -43,7 +65,10 @@ footer {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  margin: 0 10px 0 0; }
+  margin: 0 10px 0 0;
+  fill: #729fcf; }
+  a:hover .icon {
+    fill: black; }
 
 @media all and (min-width: 1025px) {
   header {
