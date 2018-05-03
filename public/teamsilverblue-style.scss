@@ -61,6 +61,10 @@ header {
   .logo img {
    width: 128px;
    height: 128px;
+   transition: transform 300ms ease-out;
+   &:hover, &:focus {
+    transform: scale(1.05);
+   }
   }
  
   nav {

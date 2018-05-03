@@ -52,7 +52,10 @@ header {
   margin: 0.5em; }
   header .logo img {
     width: 128px;
-    height: 128px; }
+    height: 128px;
+    transition: transform 300ms ease-out; }
+    header .logo img:hover, header .logo img:focus {
+      transform: scale(1.05); }
   header nav {
     margin: 3em 1em 1em;
     display: flex;
