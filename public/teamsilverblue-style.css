@@ -38,14 +38,14 @@ a {
 
 header {
   flex: 1;
-  margin: 0%;
-  padding: 2%;
-  margin: 0% 0% 0% 5%; }
+  margin: 0;
+  padding: 1em;
+  margin: 0.5em; }
   header .logo img {
     width: 128px;
     height: 128px; }
   header nav {
-    margin: 5% 0% 0% 5%;
+    margin: 3em 1em 1em;
     display: flex;
     flex-direction: column; }
     header nav a {
@@ -119,11 +119,7 @@ footer {
     flex-direction: column; }
 
   header {
-    clear: both;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
-    position: relative; }
+    min-height: 120px; }
 
   header nav {
     flex-direction: row;
