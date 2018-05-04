@@ -1,17 +1,30 @@
 <!-- See structure.html for the template names used here and their position in the layout. -->
-{{define "title"}}Team Silverblue{{end}}
+{{define "title"}}Team Silverblue &mdash; News{{end}}
 
 {{define "body"}}
 <article>
-  <h1>Build your Applications on the Next-Generation Desktop OS</h1>
-
-  <p>Use an immutable system image to run your containers and applications.
-     Team Silverblue supports you with container tools and containerized
-     applications.</p>
-
-  <p>Team Silverblue is based on the Fedora Workstation and uses rpm-ostree for
-     image-based deployment.</p>
-
-  <p class="learnmore"><a href="/docs">Learn more</a></p>
+  <h1>Introducing Team Silverblue</h1>
+  <section>
+    <p>The <a href="https://fedoraproject.org/wiki/Workstation/AtomicWorkstation">Atomic variant</a>
+    of Fedora Workstation has been around for a few years. It has been a low-key operation that
+    only a few people knew about and used. By now, most of the necessary pieces of infrastructure
+    for a good desktop experience have fallen into place, and it is time to bring the Atomic
+    Workstation to a bigger audience.</p>
+    <img class="blog-image" alt="Silverblue logo" src="/public/silverblue-logo.svg">
+    <p>The <em>Team Silverblue</em> project is about taking the last few steps for turning
+    the Atomic Workstation variant into a first-class product, and making it as good or better
+    than the traditional variant for most use cases. A particular focus will be on <em>developers</em>,
+    and we are working on better support for container-based workflows and pet containers
+    in the desktop.</p>
+    <p>If you are interested in helping out, please 
+    <a href="https://www.teamsilverblue.org/community">join</a> Team Silverblue.
+    And if you think your use case would be a good fit for an image-based desktop OS,
+    we'd like to <a href="https://pagure.io/fedora-atomic-workstation/issues">hear</a> from you!
+    <p>We aim to make good progress on this project for Fedora 29 and plan to make the Atomic
+    Workstation variant the preferred one by Fedora 30.</p>
+    <p>Visit the Team Silverblue <a href="https://www.teamsilverblue.org">website</a> to learn
+    more and follow us on <a href="https://twitter.com/teamsilverblue">Twitter</a> to get the
+    latest updates.</p>
+  </section>
 </article>
 {{end}}
