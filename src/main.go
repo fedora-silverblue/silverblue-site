@@ -16,20 +16,14 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.URL.Path {
 	case "/":
 		content = "../pages/index.html"
-	case "/blog":
-		content = "../pages/blog/index.html"
-	case "/community":
-		content = "../pages/community/index.html"
+	case "/stories":
+		content = "../pages/stories/index.html"
 	case "/contribute":
 		content = "../pages/contribute/index.html"
-	case "/docs":
-		content = "../pages/docs/index.html"
 	case "/download":
 		content = "../pages/download/index.html"
-	case "/talks":
-		content ="../pages/talks/index.html"
-	case "/tools":
-		content = "../pages/tools/index.html"
+	case "/elsewhere":
+		content ="../pages/elsewhere/index.html"
 	default:
 		content = "../pages/" + r.URL.Path + ".html"
 	}
