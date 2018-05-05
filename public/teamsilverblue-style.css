@@ -14,10 +14,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 200; }
 
 h1 {
-  font-size: 160%; }
+  font-size: 160%;}
 
 h2 {
-  font-size: 120%; }
+  font-size: 140%; color: #436795;}
 
 a {
   color: #436795;
@@ -154,6 +154,39 @@ pre {
   max-width: 60em;
   margin: 3em auto;
   border-radius: 6px; }
+
+.author {font-size: 80%;}
+
+blockquote {
+  display: block;
+  text-align: center;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #436795;
+  padding: 2em 0 0.5em 0;
+  margin: 1.5em 0;
+  position: relative;
+}
+blockquote:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1em Overpass, sans-serif;
+  color: #436795;
+  text-align: center;
+}
+blockquote:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: #e74c3c;
+}
 
 /* Mobile Layout */
 @media all and (max-width: 1024px) {
