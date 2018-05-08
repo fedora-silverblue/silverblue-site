@@ -4,8 +4,31 @@
 {{define "body"}}
 <article>
 <h1>Download a Silverblue image</h1>
+
 <p>Silverblue images for Fedora 28 are provided by the Fedora Project.</p>
 <p><a class="button" href='https://download.fedoraproject.org/pub/fedora/linux/releases/28/AtomicWorkstation/x86_64/iso/Fedora-AtomicWorkstation-ostree-x86_64-28-1.1.iso'><svg class="icon"><use href="/public/svg-sprites.svg#download" /></svg>64-bit 1.9GB Silverblue image</a></p>
+
+<p>Fedora provides the Media Writer as a convenient way to create bootable USB drives.</p>
+<p>You will need
+<ul>
+<li>The Silverblue image (download above)
+<li>Fedora Media Writer (download below)
+<li>A USB Flash drive with at least 2GB space available
+</ul>
+</p>
+<p>Download the Silverblue image and the Fedora Media Writer program for your OS.
+In the Media Writer window, click "Custom image", select the Silverblue image,
+and follow the prompts to write the image to the USB Drive.
+You may then install Silverblue by booting from your USB Drive.</p>
+
+<h1>Get Fedora Media Writer</h1>
+
+<p>If you are on a Fedora system, you can install MediaWriter using dnf:
+<pre>dnf install mediawriter</pre></p>
+<p>Other supported platforms include OS X and Windows:
+<a class="button" href="https://getfedora.org/fmw/FedoraMediaWriter-osx-4.1.1.dmg">23.4 MB Fedora Media Writer for <b>OS X</b></a>
+<a class="button" href="https://getfedora.org/fmw/FedoraMediaWriter-win32-4.1.1.exe">22.7 MB Fedora Media Writer for <b>Windows</b></a>
+</p>
 
 <details class="conditions">
 <summary>By downloading Silverblue, you agree to comply with the following terms and conditions.</summary>
