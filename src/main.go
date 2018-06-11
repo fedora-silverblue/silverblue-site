@@ -31,13 +31,13 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 	info, err := os.Stat(content)
 	if err != nil {
 		if os.IsNotExist(err) {
-			http.NotFound(w, r)
+			errorHandler(w, r, http.StatusNotFound)
 			return
 		}
 	}
 
 	if info.IsDir() {
-		http.NotFound(w, r)
+		errorHandler(w, r, http.StatusNotFound)
 		return
 	}
 
@@ -47,6 +47,20 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	tmpl.ExecuteTemplate(w, "structure", nil)
+}
+
+func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
+	w.WriteHeader(status)
+	if (status == http.StatusNotFound) {
+		layout := "../templates/structure.html"
+		content := "../pages/notfound.html"
+		tmpl, err := template.ParseFiles(layout, content)
+		if err != nil {
+			http.Error(w, http.StatusText(500), 500)
+			return
+		}
+		tmpl.ExecuteTemplate(w, "structure", nil)
+	}
 }
 
 // main starts the web server and routes URLS.
