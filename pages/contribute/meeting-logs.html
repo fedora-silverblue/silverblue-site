@@ -1,0 +1,94 @@
+<!-- See structure.html for the template names used here and their position in the layout. -->
+{{define "title"}}Team Silverblue &mdash; Contribute{{end}}
+
+{{define "body"}}
+<article>
+
+<h1>Meeting Summaries</h1>
+
+<h3>Notes from IRC meetings</h3>
+
+<ul>
+  <li><a href="https://meetbot.fedoraproject.org/fedora-meeting-2/2018-06-11/team_silverblue.2018-06-11-13.01.html">June 11, 2018</a>
+  <li><a href="https://meetbot.fedoraproject.org/fedora-meeting-2/2018-04-30/faw_sig.2018-04-30-13.00.html">April 30, 2018</a>
+  <li><a href="https://meetbot.fedoraproject.org/fedora-meeting-2/2018-04-16/atomic_workstation_sig.2018-04-16-13.05.html">April 16, 2018</a>
+  <li><a href="https://meetbot.fedoraproject.org/fedora-meeting-2/2018-03-19/atomic_workstation_sig.2018-03-19-14.02.html">March 19, 2018</a>
+  <li><a href="https://meetbot.fedoraproject.org/teams/fedora_atomic_workstation/fedora_atomic_workstation.2018-03-05-14.04.log.html">March 5, 2018</a>
+</ul>
+
+<h3>Notes from the call on Feb 19, 2018</h3>
+
+<h4>Agenda: on Fedora wiki, Workstation/AtomicWorkstation/SIG/Agenda</h4>
+<h4>Participants:</h4>
+<ul>
+  <li>Sanja Bonic
+  <li>Owen Taylor
+  <li>Matthias Clasen
+  <li>Jeff Ligon
+  <li>Jonathan Lebon
+  <li>Suraj Narwade
+  <li>Micah Abbott
+  <li>Steve Milner
+  <li>Kalev Lember
+  <li>Allan Day
+</ul>
+
+<h4>Topic: Meeting time and venue</h4>
+
+<p><b>Decision:</b> Future meetings will be on irc, same time, bi-weekly. Well aim for 45 minutes
+since some of us have another meeting at 9:45.<br>
+No recording, we'll take notes</p>
+
+<h4>Topic: Fedora 28 goals</h4>
+
+<p>The big feature in Fedora 28 will be rpm-ostree support in GNOME software<br>
+We'll also have proper website for FAW (as part of the Project Atomic website)<br>
+<b>Future topic:</b> release planning:
+<ul>
+  <li>how do we go from alpha to beta to final ?
+  <li>make sure we have a FAW release at GA time, not delayed
+  <li>how frequently do we want composes ?
+  <li>is there any form of gating for the images ?
+</ul>
+</p>
+
+<p>In discussion around update frequency, Kalev points out that it would be good to sync
+the OSTree updates with package repo metadata updates. See this:
+<a href="https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/message/MFXURKYAIMHU27JR36GENXLCKL2QML6R/">discussion</a></p>
+
+<p>The experimental jigdo transport for rpm-ostree also came up in this discussion as a
+possible solution for 'split package version' situations. This is not aimed at F28 though,
+more likely F30.</p>
+
+<h4>Topic: Status of composes</h4>
+
+<p>Is there a person responsible for FAW composes in rel-eng ? Not particularly :-(<br>
+This page tracks it somewhat: <a href="https://www.happyassassin.net/nightlies.html">https://www.happyassassin.net/nightlies.html</a> - Workstation dvd-ostree on that page is the FAW installer image<br>
+Rawhide composes have not been working for quite some time, recently fixed: <a href="https://pagure.io/atomic-wg/issue/409">https://pagure.io/atomic-wg/issues/409</a><br>
+F27 composes have been happening though</p>
+
+<p>In discussion of composes, the question of the two branches (f27 and updates) came up. The branches work slightly differently from the package repos of the same name: the f27 package repo is frozen in time, while the f27 branch in OSTree still moves forward, just at a more granular pace than updates (at least in theory, we were not exactly clear if any gating happens for this currently).</p>
+
+<p>Future topic that came up here: How do we determine the package set ? Do we differentiate more from FAH or move closer to the regular workstation ? Installing default apps as flatpaks helps for this.</p>
+
+<h4>Topic: Status of Flatpaks from rpms in Fedora</h4>
+
+<p>Everything is lined up<br>
+    New person on the rel-eng side is starting<br>
+    Still a few weeks away from seeing the first flatpak produced in this way</p>
+
+<h4>Topic: Website</h4>
+
+<p>Currently here: http://new.projectatomic.io<br>
+    Will have a section on FAW<br>
+    Will replace www.projectatomic.io soon</p>
+
+<h4>Topic: Issue tracking</h4>
+
+<p>Currently, we have a very non-obvious pagure project for it<br>
+    Owen suggests that we create an empty project for it. Atomic wg does that: https://pagure.io/atomic-wg/issues<br>
+    <b>Decision:</b> we will do the same</p>
+
+</article>
+
+{{end}}
