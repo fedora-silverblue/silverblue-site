@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass|Source+Code+Pro|Source+Sans+Pro");
 body {
-  font-family: "Source Sans Pro", Sans-Serif;
+  font-family: "Source Sans Pro", "Noto Color Emoji", Sans-Serif;
   font-size: 12pt;
   line-height: 1.5em;
   max-width: 62em;
