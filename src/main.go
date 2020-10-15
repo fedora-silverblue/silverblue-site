@@ -32,8 +32,10 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		if os.IsNotExist(err) {
 			errorHandler(w, r, http.StatusNotFound)
-			return
+		} else {
+			errorHandler(w, r, http.StatusBadRequest)
 		}
+		return
 	}
 
 	if info.IsDir() {
