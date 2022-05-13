@@ -24,6 +24,8 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 		content = "../pages/download/index.html"
 	case "/elsewhere":
 		content ="../pages/elsewhere/index.html"
+	case "/about":
+		content ="../pages/about/index.html"                
 	default:
 		content = "../pages/" + r.URL.Path + ".html"
 	}
