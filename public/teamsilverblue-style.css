@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Overpass|Source+Code+Pro|Source+Sans+Pro");
 body {
-  font-family: "Source Sans Pro", Sans-Serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 12pt;
   line-height: 1.5em;
   max-width: 62em;
   margin: auto;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 img {
   max-width: 100%;
@@ -15,141 +15,186 @@ img {
   width: auto\9;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: Overpass, Interstate, Sans-Serif;
-  font-weight: 200; }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Overpass, Interstate, sans-serif;
+  font-weight: 200;
+}
 
 h1 {
-  font-size: 160%;}
+  font-size: 160%;
+}
 
 h2 {
-  font-size: 140%; color: #436795;}
+  font-size: 140%;
+  color: #436795;
+}
 
 a {
   color: #436795;
-  transition: all 400ms ease-in-out; }
-  a:visited {
-    color: #436795; }
-  a:hover, a:focus {
-    color: #000; }
-  a.button {
-    display: inline-block;
-    margin: 6px;
-    padding: 1em;
-    text-align: center;
-    background-color: #436795;
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 4px; }
-    a.button:hover, a.button:focus {
-      background-color: #5780b4; }
-      a.button:hover svg, a.button:focus svg {
-        fill: #fff; }
-    a.button svg {
-      fill: #fff; }
-    a.button:active {
-      background-color: #334f72; }
-      a.button:active svg {
-        fill: #fff; }
+  transition: all 400ms ease-in-out;
+}
+
+a:visited {
+  color: #436795;
+}
+
+a:hover,
+a:focus {
+  color: #000;
+}
+
+a.button {
+  display: inline-block;
+  margin: 6px;
+  padding: 1em;
+  text-align: center;
+  background-color: #436795;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+a.button:hover,
+a.button:focus {
+  background-color: #5780b4;
+}
+a.button:hover svg,
+a.button:focus svg {
+  fill: #fff;
+}
+a.button svg {
+  fill: #fff;
+}
+a.button:active {
+  background-color: #334f72;
+}
+a.button:active svg {
+  fill: #fff;
+}
 
 .wrapper {
   display: flex;
-  flex: 1; }
+  flex: 1;
+}
 
 header {
   flex: 1;
-  margin: 0;
+  margin: 0.5em;
   padding: 1em;
-  margin: 0.5em; }
-  header .logo img {
-    width: 128px;
-    height: 128px;
-    transition: transform 300ms ease-out; }
-    header .logo img:hover, header .logo img:focus {
-      transform: scale(1.05); }
-  header nav {
-    margin: 3em 1em 1em;
-    display: flex;
-    flex-direction: column; }
-    header nav a {
-      flex: 1;
-      display: block;
-      padding: 0;
-      white-space: nowrap;
-      margin: .5em 0;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 80%;
-      text-decoration: none;
-      border-bottom: 2px solid transparent; }
-      header nav a:hover, header nav a:active, header nav a:focus {
-        border-bottom: 2px solid #436795; }
-    header nav hr {
-      border-width: 0;
-      margin: 1em; }
+}
+header .logo img {
+  width: 128px;
+  height: 128px;
+  transition: transform 300ms ease-out;
+}
+header .logo img:hover,
+header .logo img:focus {
+  transform: scale(1.05);
+}
+header nav {
+  margin: 3em 1em 1em;
+  display: flex;
+  flex-direction: column;
+}
+header nav a {
+  flex: 1;
+  display: block;
+  padding: 0;
+  white-space: nowrap;
+  margin: 0.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 80%;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+header nav a:hover,
+header nav a:active,
+header nav a:focus {
+  border-bottom: 2px solid #436795;
+}
+header nav hr {
+  border-width: 0;
+  margin: 1em;
+}
 
 main {
   flex: 4;
-  padding: 1em; }
+  padding: 1em;
+}
 
 article {
-  box-sizing: border-box; }
-  article section.boxes {
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2.5em;
-    padding: 0.5em; }
-    article section.boxes section {
-      padding: 1em; }
+  box-sizing: border-box;
+}
+article section.boxes {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2.5em;
+  padding: 0.5em;
+}
+article section.boxes section {
+  padding: 1em;
+}
 
 .conditions {
   cursor: pointer;
-  margin: 1em; }
-  .conditions p {
-    box-sizing: border-box;
-    line-spacing: 3em;
-    font-size: 90%;
-    margin: 2em; }
+  margin: 1em;
+}
+.conditions p {
+  box-sizing: border-box;
+  font-size: 90%;
+  margin: 2em;
+}
 
-#copyright {
+.copyright {
   margin: 3em 0 0 0;
   font-size: 80%;
   letter-spacing: 0.2em;
-  color: rgba(0, 0, 0, 0.3); }
+  color: rgba(0, 0, 0, 0.3);
+}
 
 img.blog-image {
   display: block;
   margin: auto;
-  padding: 10px; }
+  padding: 10px;
+}
 
 ul li {
   list-style-type: none;
   padding: 0 0 0 20px;
   vertical-align: middle;
-  margin: .5em 0;
-  background: url(/public/bullet.svg) no-repeat left 4px; }
+  margin: 0.5em 0;
+  background: url(/public/bullet.svg) no-repeat left 4px;
+}
 
 footer {
   text-align: center;
   padding: 2em;
-  margin: 0; }
-  footer p {
-    padding: 2% 0% 0% 0%; }
-  footer nav a {
-    text-alias: center;
-    padding: 1em; }
+  margin: 0;
+}
+footer p {
+  padding: 2% 0 0 0;
+}
+footer nav a {
+  padding: 1em;
+}
 
 .icon {
-  /* Really dislike these - I understand but what's another solution that doesn't impact performance too much? */
   width: 16px;
   height: 16px;
   vertical-align: middle;
   margin: 0 10px 0 0;
   fill: #729fcf;
-  transition: all 400ms ease-in-out; }
-  a:hover .icon {
-    fill: black; }
+  transition: all 400ms ease-in-out;
+}
+a:hover .icon {
+  fill: black;
+}
 
 pre {
   font-family: "Source Code Pro", monospace;
@@ -159,9 +204,12 @@ pre {
   overflow-x: auto;
   max-width: 60em;
   margin: 3em auto;
-  border-radius: 6px; }
+  border-radius: 6px;
+}
 
-.author {font-size: 80%;}
+.author {
+  font-size: 80%;
+}
 
 blockquote {
   display: block;
@@ -174,9 +222,9 @@ blockquote {
   position: relative;
 }
 blockquote:before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
-  top: 0em;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
@@ -187,7 +235,7 @@ blockquote:before {
   text-align: center;
 }
 blockquote:after {
-  content: "\2013 \2003" attr(cite);
+  content: "\2013 \2003"attr(cite);
   display: block;
   text-align: right;
   font-size: 0.875em;
@@ -197,34 +245,37 @@ blockquote:after {
 /* Mobile Layout */
 @media all and (max-width: 1024px) {
   .wrapper {
-    flex-direction: column; }
+    flex-direction: column;
+  }
 
   header {
-    min-height: 120px; }
+    min-height: 120px;
+  }
 
   header nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-content: center;
-    margin: 6px 6px 6px 140px; }
+    margin: 6px 6px 6px 140px;
+  }
 
   header nav a {
-    padding: .5em 1em;
-    text-align: center; }
-
-  header nav hr {
-    display: none; }
+    padding: 0.5em 1em;
+    text-align: center;
+  }
 
   header a.logo img {
     position: absolute;
     top: 0;
     left: 0;
-    order: 6;
     width: 96px;
     height: auto;
-    margin: 16px; } }
+    margin: 16px;
+  }
+}
 
+/* Dark Color Scheme */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #444;
@@ -239,9 +290,7 @@ blockquote:after {
     filter: grayscale(30%);
   }
 
-  #copyright {
+  .copyright {
     color: #e4e4e4;
   }
 }
-
-/*# sourceMappingURL=teamsilverblue-style.css.map */
