@@ -242,22 +242,88 @@ blockquote:after {
   color: #e74c3c;
 }
 
+/* Desktop Layout */
+@media all and (min-width: 1024px) {
+  #mobile-menu-toggle,
+  #mobile-menu-toggle + label {
+    display: none;
+  }
+}
+
 /* Mobile Layout */
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023px) {
   .wrapper {
     flex-direction: column;
   }
 
   header {
-    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  #mobile-menu-toggle {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  #mobile-menu-toggle + label {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    color: #436795;
+    cursor: pointer;
+    transition: color 400ms ease-in-out;
+    user-select: none;
+  }
+
+  #mobile-menu-toggle + label:hover {
+    color: #000;
+  }
+
+  #mobile-menu-toggle:focus-visible + label {
+    background-color: #e4e4e4;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  #mobile-menu-toggle + label::before,
+  #mobile-menu-toggle + label::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid currentColor;
+    width: 36px;
+    height: 10px;
+    margin: 0 6px;
+  }
+
+  #mobile-menu-toggle + label::before {
+    border-top: 2px solid currentColor;
+    margin-top: 11px;
+  }
+
+  #mobile-menu-toggle:checked + label {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+
+  #mobile-menu-toggle:checked ~ nav {
+    display: flex;
   }
 
   header nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: none;
+    flex-direction: column;
     align-content: center;
-    margin: 6px 6px 6px 140px;
+    margin: 6px 0 0 0;
+    width: 100%;
   }
 
   header nav a {
@@ -266,12 +332,9 @@ blockquote:after {
   }
 
   header a.logo img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 96px;
-    height: auto;
-    margin: 16px;
+    display: block;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -288,6 +351,10 @@ blockquote:after {
 
   img {
     filter: grayscale(30%);
+  }
+
+  #mobile-menu-toggle:checked + label {
+    color: #fff;
   }
 
   .copyright {
