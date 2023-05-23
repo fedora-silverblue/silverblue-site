@@ -1,53 +1,13 @@
 {{define "structure"}}
-<!DOCTYPE html>
-<html lang="en" >
-
+<!-- HTML meta refresh URL redirection -->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
-  <meta name="theme-color" content="#1b202a">
-  <meta name="description" content="{{template `title`}}">
-
-  <link rel="shortcut icon" href="/public/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass&family=Overpass+Mono&family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/public/teamsilverblue-style.css">
-  <link rel="stylesheet" href="/public/teamsilverblue-style-print.css" media="print">
-  <title>{{template "title"}}</title>
+   <meta http-equiv="refresh"
+   content="0; url=https://fedoraproject.org/silverblue/">
 </head>
-
 <body>
-  <div class="wrapper">
-  <header>
-    <a class="logo" href="/"><img alt="Silverblue logo" src="/public/silverblue-logo.svg"></a>
-    <nav>
-        <a href="/about">About</a>
-        <a href="https://discussion.fedoraproject.org/c/desktop/silverblue">Community</a>
-        <a href="/contribute">Contribute</a>
-        <a href="https://docs.fedoraproject.org/en-US/fedora-silverblue/">Documentation</a>
-        <a href="/elsewhere">Other Resources</a><br>
-        <a href="/download">Download</a>
-    </nav>
-  </header>
-
-  <main>
-  {{template "body" .}}
-  </main>
-
-</div>
-<footer>
-    <nav>
-      <a href="https://twitter.com/teamsilverblue"><svg class="icon"><use href="/public/svg-sprites.svg#twitter" /></svg>Twitter</a>
-      <a href="https://github.com/fedora-silverblue"><svg class="icon"><use href="/public/svg-sprites.svg#github" /></svg>GitHub</a>
-      <a href="https://web.libera.chat/#silverblue"><svg class="icon"><use href="/public/svg-sprites.svg#hash" /></svg>IRC</a>
-      <a href="https://discussion.fedoraproject.org/c/desktop/silverblue"><svg class="icon"><use href="/public/svg-sprites.svg#comments" /></svg>Community</a>
-      <a href="https://fedoraproject.org/wiki/Legal:PrivacyPolicy">Privacy Policy</a>
-    </nav>
-    <p class="copyright">
-      &copy; 2022 Fedora Silverblue.<br>A Fedora initiative.
-    </p>
-  </footer>
+   <p>The page has moved to:
+   <a href="https://fedoraproject.org/silverblue/">this page</a></p>
 </body>
 </html>
 {{end}}
